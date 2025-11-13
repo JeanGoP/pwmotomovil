@@ -107,7 +107,7 @@ body {
 .card-media.alt { background: linear-gradient(135deg, #2dd4bf, #0d5b52) }
 .card-media.dark { background: linear-gradient(135deg, #151519, #30303a) }
 .card-media.lime { background: linear-gradient(135deg, #12b981, #065f46) }
-.card-body { padding: 14px }
+.card-body { padding: 50px }
 .card-body h3 { margin: 4px 0 8px; font-size: 18px }
 .card-body .price { color: var(--primary); font-weight: 700; margin-bottom: 6px }
 .card-body p { margin: 0 0 12px; color: var(--muted) }
