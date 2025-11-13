@@ -210,6 +210,10 @@ body {
   .testi-grid { grid-template-columns: 1fr }
   .promo-banner { grid-template-columns: 1fr }
   .stores-grid { grid-template-columns: 1fr }
+  .brands-row { grid-template-columns: repeat(3, 1fr) }
+  .footer-top { grid-template-columns: 1fr 1fr }
+  .repuestos-grid { grid-template-columns: 1fr }
+  .why-grid { grid-template-columns: repeat(2, 1fr) }
 }
 
 @media (max-width: 720px) {
@@ -218,6 +222,12 @@ body {
   .primary-nav.open { display: block }
   .primary-nav ul { flex-direction: column }
   .cards-grid { grid-template-columns: 1fr }
+  .brands-row { grid-template-columns: repeat(2, 1fr) }
+  .footer-top { grid-template-columns: 1fr }
+  .why-grid { grid-template-columns: 1fr }
+  .service-grid { grid-template-columns: 1fr }
+  .hero-carousel { height: 70vh }
+  .header-inner .logo:last-child { display: none }
 }
 .why { padding: 40px 0 }
 .why h2 { text-align: center; text-transform: uppercase; color: var(--brand-blue); letter-spacing: .02em; margin: 0 0 8px }
@@ -255,3 +265,8 @@ body {
 .cta-posventa p { text-align: center; color: #e8e8ec; margin: 0 0 20px }
 .posventa-title { text-align: center; text-transform: uppercase; color: var(--brand-blue); letter-spacing: .02em; margin: 0 0 8px }
 .posventa-subtitle { text-align: center; color: var(--muted); margin-bottom: 22px }
+@media (max-width: 960px) { .why-grid { grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 720px) {
+  .why-grid { grid-template-columns: 1fr }
+  .why-card { grid-template-columns: 1fr; justify-items: center; text-align: center }
+}
