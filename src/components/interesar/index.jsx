@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { LuMessageCircle } from "react-icons/lu";
 import { useState } from "react";
 import { MessageCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 const Interesar = ({opcion}) => {
   const [activeMenu, setActiveMenu] = useState("inicio");
   const location = useLocation();
@@ -32,12 +33,12 @@ const handleNavigation = (idOrPath) => {
     return (
       <div className="interesar-card h-100">
         <p className="interesar-title">
-        ¿Te interesa esta motocicleta?
+        ¿TE INTERESA ESTA MOTOCICLETA?
         </p>
         <p className="interesar-text">
         Obtén la mejor cotización y opciones de financiamiento para tu nueva moto.
         </p>
-        <button className="btn interesar-btn"><MessageCircle style={{position:'relative', right:'10px', bottom:'3px'}}/><NavLink to="/cotizacion" className="a-footer" style={{color:"black"}}> Solicitar cotización </NavLink> </button>
+        <button className="btn interesar-btn"><NavLink to="/cotizacion" style={{textDecoration:'none', color:'#b8003e'}}> Solicitar cotización </NavLink> <ArrowRight style={{position:'relative', left:'10px', bottom:'1px'}}/> </button>
       </div>
     );
   }
@@ -46,7 +47,7 @@ const handleNavigation = (idOrPath) => {
       <div className="interesar-card--B h-100">
       
         <p className="interesar-title">
-        Visita nuestras sedes
+        VISITA NUESTRAS SEDES
         </p>
         <p className="interesar-text">
         Conoce nuestras instalaciones y recibe asesoría personalizada de nuestros expertos.

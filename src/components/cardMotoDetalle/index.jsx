@@ -38,71 +38,28 @@ const CardMotoDetalle = ({ nombre, subtitulo, descripcion, precio, colores }) =>
     window.open(url, "_blank");
   };
   return (
-    <div className="motoObjeto-detalle">
-      <p className="motoObjeto-nombre">{nombre}</p>
-      <p className="motoObjeto-subtitulo">{subtitulo}</p>
-      <p className="motoObjeto-descripcion">{descripcion}</p>
+    <> <div className="col-12">
+      <div className="motoObjeto-detalle">
+       
 
-      <div className="motoObjeto-precio">
-        <p className="precio--titulo">Precio desde</p>
-        <p className="precio--moto">{precio.toLocaleString("es-CO")}</p>
+          <div className="contenido--motoObjeto"><p className="motoObjeto-subtitulo">{subtitulo}</p></div>
 
-      </div>
+          <p className="motoObjeto-descripcion">{descripcion}</p>
 
-      <div className="motoObjeto-botones">
-        <button className="btn btn-rojo--coti" > <NavLink style={{ color: "white", textDecoration: "none" }} to="/cotizacion" > Solicitar cotización</NavLink></button>
-        {/* <button className="btn btn-rojo--contac" onClick={handleClickWhatsapp}>Contáctanos</button> */}
-      </div>
-      {/* 
-      <div className="motoObjeto-colores">
-        <p className="colores">Colores disponibles</p>
-        <div className="colores-grid">
-          {colores.map((c, i) => (
-            <button
-              key={i}
-              className={`color-btn ${colorSeleccionado === i ? "activo" : ""}`}
-              onClick={() => setColorSeleccionado(i)}
-            >
-              <div className="color-info">
-                <span
-                  className="color-circle"
-                  style={{   background: c.colorHex?.startsWith("linear")
-                    ? c.colorHex
-                    : c.colorHex || "#fff" }}
-                ></span>
-                <span className="color-nombre">{c.nombre}</span>
-                {c.extra && <span className="color-extra">{c.extra}</span>}
-              </div>
-             
-            </button>
-          ))}
-        </div>
-      </div> */}
+          <div className="motoObjeto-precio">
+            <p className="precio--titulo">PRECIO</p>
+            <p className="precio--moto">{precio.toLocaleString("es-CO")}</p>
 
-      <div className="motoObjeto-colores">
-        <p className="colores">Colores disponibles</p>
+          </div>
 
-        <div className="colores-grid">
-          {colores.map((c, i) => (
-            <button
-              key={i}
-              className={`color-btn ${colorSeleccionado === i ? "activo" : ""}`}
-              onClick={() => setColorSeleccionado(i)}
-            >
-              <span
-                className="color-circle"
-                style={{
-                  background: c.colorHex?.startsWith("linear")
-                    ? c.colorHex
-                    : c.colorHex || "#fff"
-                }}
-              />
-              <span className="color-nombre">{c.nombre}</span>
-            </button>
-          ))}
+          <div className="motoObjeto-botones">
+            <button className="btn btn-rojo--coti" > <NavLink style={{ color: "white", textDecoration: "none" }} to="/cotizacion" > Solicitar cotización</NavLink></button>
+
+          </div>
         </div>
       </div>
-    </div>
+
+    </>
   );
 };
 

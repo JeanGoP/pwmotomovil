@@ -1,59 +1,83 @@
 .interesar-card {
-    background: #1f325b;
+  background: linear-gradient(
+    to bottom right,
+    #b8003e,
+    #8a0030
+  );
     color: #fff;
     border-radius: 12px;
     padding: 32px;
-
+border: none;
   }
   
   .interesar-title {
-    font-size: 1.2rem;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 12px;
   }
   
   .interesar-text {
     font-size: 0.95rem;
     margin-bottom: 20px;
+    font-family: Poppins, sans-serif;
+
   }
   
   .interesar-btn {
     background-color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
+   
     padding: 12px 20px;
     width:230px;
     transition: all 0.3s ease;
     margin-top: 10px;
+    font-family: Poppins, sans-serif;
+    color: #b8003e !important;
+
   }
   
   .interesar-btn:hover {
     background-color: #f1f1f1;
-    color: #1f325b;
+    color: #b8003e;
+
     transform: scale(1.04);
+    border: none;
   }
   
   .interesar-btn-B {
     background-color: #fff;
-    color:#e60012;
+    color:#003e8b;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
     padding: 12px 20px;
     width:230px;
     transition: all 0.3s ease;
+    font-family: Poppins, sans-serif;
+
  
   }
   
   .interesar-btn-B:hover {
     background-color: #fff;
-    color: #e60012;
+    color: #003e8b;
     transform: scale(1.04);
+    border: none;
   }
   
   .interesar-card--B{
-    background: #e60012;
+    background: linear-gradient(
+      to bottom right,
+      #003e8b,
+      #0051b8
+    );
     color: #fff;
     border-radius: 12px;
     padding: 32px;
     text-align: left;
+    font-family: Poppins, sans-serif;
+    border: none;
+
   }
   

@@ -10,6 +10,7 @@ import SectionHeader from "../../components/view/sectionHeader";
 import CardDetalle from "../../components/cardDetalle";
 import Interesar from "../../components/interesar";
 import Especificaciones from "../../components/especificaciones";
+import FichaTecnica from "../../components/fichaTecnica";
 export function Motocicleta() {
     const navigate = useNavigate();
     const location = useLocation();
@@ -35,19 +36,32 @@ export function Motocicleta() {
         return [];
     });
 
-    const getFichaPorNombres = (fichaTecnica = [], ids = []) => {
-        return fichaTecnica
-            .filter(item => ids.includes(item.ficha_tecnica_id))
-            .map(item => ({
-                nombre: item.ficha_tecnica_name,
-                detalle: item.ficha_tecnica_detalle
-            }));
-    };
+    const getFichasPorIds = (fichaTecnica = [], ids = []) =>
+        ids.map(id =>
+            fichaTecnica.find(ft => String(ft.ficha_tecnica_id) === String(id))
+                ?.ficha_tecnica_detalle || "No disponible"
+        );
+    const getFichaPorId = (fichaTecnica = [], id) => {
+        const item = fichaTecnica.find(
+            ft => String(ft.ficha_tecnica_id) === String(id)
+        );
 
-    const ficha_tecnica_cilindraje = getFichaPorNombres(moto.ficha_tecnica ?? [], ['1', '11', '5', '4'])
-    const ficha_tecnica_potencia = getFichaPorNombres(moto.ficha_tecnica ?? [], ['21', '12'])
-    const ficha_tecnica_torque = getFichaPorNombres(moto.ficha_tecnica ?? [], ['22', '28'])
-    const ficha_tecnica_peso = getFichaPorNombres(moto.ficha_tecnica ?? [], ['16', '13'])
+        return item?.ficha_tecnica_detalle || "No disponible";
+    };
+    const ficha_tecnica_cilindraje = getFichaPorId(moto.ficha_tecnica ?? [], '1');
+    const ficha_tecnica_potencia = getFichaPorId(moto.ficha_tecnica ?? [], '21');
+    const ficha_tecnica_torque = getFichaPorId(moto.ficha_tecnica ?? [], '22');
+    const ficha_tecnica_peso = getFichaPorId(moto.ficha_tecnica ?? [], '13');
+
+    let motor = getFichaPorId(moto.ficha_tecnica ?? [], '11');
+    let alimentacion = getFichaPorId(moto.ficha_tecnica ?? [], '5');
+    let transmision = getFichaPorId(moto.ficha_tecnica ?? [], '12');
+    let frenodelante = getFichaPorId(moto.ficha_tecnica ?? [], '8');
+    let frenotrasero = getFichaPorId(moto.ficha_tecnica ?? [], '9');
+    let tanque = getFichaPorId(moto.ficha_tecnica ?? [], '16');
+    let suspenciondelantera = getFichaPorId(moto.ficha_tecnica ?? [], '6');
+    let suspenciontrasera = getFichaPorId(moto.ficha_tecnica ?? [], '7');
+
 
     const imagenMoto = moto.imagen_portada || "/images/nophoto.jpg"
     const imagenTemp = [imagenMoto]
@@ -61,6 +75,7 @@ export function Motocicleta() {
         setActiveMenu(id);
         navigate("/modelos", { state: { scrollTo: id } });
     };
+    const [colorSeleccionado, setColorSeleccionado] = useState(null);
     return (
         <>
             <div style={{ background: "#ffffff" }}>
@@ -118,73 +133,75 @@ export function Motocicleta() {
                                 colores={coloresMoto}
                             />
                         </div>
+                        <div className="col-12">
+                            <div className="motoObjeto-colores">
+                                <p className="colores">COLORES DISPONIBLES</p>
+
+                                <div className="colores-grid">
+                                    {coloresMoto.map((c, i) => (
+                                        <button
+                                            key={i}
+                                            className={`color-btn ${colorSeleccionado === i ? "activo" : ""}`}
+                                            onClick={() => setColorSeleccionado(i)}
+                                        >
+                                            <span
+                                                className="color-circle"
+                                                style={{
+                                                    background: c.colorHex?.startsWith("linear")
+                                                        ? c.colorHex
+                                                        : c.colorHex || "#fff"
+                                                }}
+                                            />
+                                            <span className="color-nombre">{c.nombre}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div style={{ background: "#f9fafb", paddingTop: "20px" }}>
                 <div className="container-fluid contenido--caracteristicas">
                     <div className='row g-4 justify-content-center align-items-center text-center'>
-                        <p style={{ fontSize: '28px', color: '#1f325b', paddingTop: '20px', paddingBottom: '20px' }}>Ver más detalles del modelo</p>
+                        <p style={{ fontSize: '2.2rem', color: '#003e8b', paddingTop: '20px', paddingBottom: '20px', fontFamily: ' Poppins, sans-serif', fontWeight: '700', letterSpacing: '0.05em', opacity: '1' }}>DETALLES DEL MODELO</p>
                     </div>
                     <div className="row row--cards-especificiacion">
-                        <div className="col-sm-12 col-md-3 col-lg-3" style={{ paddingBottom: "40px" }}>
+                        <div className="col-sm-12 col-md-6 col-lg-3" style={{ paddingBottom: "40px" }}>
                             <CardDetalle
-                                titulo="Especificacione Destacadas"
+                                titulo="CILINDRAJE"
                                 icono="Gauge"
-                                json={ficha_tecnica_cilindraje}
-                                activo={detalleActivo?.titulo === "Especificaciones Destacadas"}
-                                onClick={() =>
-                                    setDetalleActivo({
-                                        titulo: "Especificaciones Destacadas",
-                                        json: ficha_tecnica_cilindraje
-                                    })
-                                }
+                                descripcion={ficha_tecnica_cilindraje}
+
                             />
                         </div>
-                        <div className="col-sm-12 col-md-3 col-lg-3" style={{ paddingBottom: "40px" }}>
+                        <div className="col-sm-12 col-md-6 col-lg-3" style={{ paddingBottom: "40px" }}>
                             <CardDetalle
-                                titulo="Potencia"
+                                titulo="POTENCIA"
                                 icono="Zap"
-                                json={ficha_tecnica_potencia}
-                                activo={detalleActivo?.titulo === "Potencia"}
-                                onClick={() =>
-                                    setDetalleActivo({
-                                        titulo: "Potencia",
-                                        json: ficha_tecnica_potencia
-                                    })
-                                }
+                                descripcion={ficha_tecnica_potencia}
+
                             />
                         </div>
-                        <div className="col-sm-12 col-md-3 col-lg-3" style={{ paddingBottom: "40px" }}>
+                        <div className="col-sm-12 col-md-6 col-lg-3" style={{ paddingBottom: "40px" }}>
                             <CardDetalle
-                                titulo="Torque"
+                                titulo="TORQUE"
                                 icono="Activity"
-                                json={ficha_tecnica_torque}
-                                activo={detalleActivo?.titulo === "Torque"}
-                                onClick={() =>
-                                    setDetalleActivo({
-                                        titulo: "Torque",
-                                        json: ficha_tecnica_torque
-                                    })
-                                }
+                                descripcion={ficha_tecnica_torque}
+
+
                             />
                         </div>
-                        <div className="col-sm-12 col-md-3 col-lg-3" style={{ paddingBottom: "40px" }}>
+                        <div className="col-sm-12 col-md-6 col-lg-3" style={{ paddingBottom: "40px" }}>
                             <CardDetalle
-                                titulo="Peso"
+                                titulo="PESO"
                                 icono="Weight"
-                                json={ficha_tecnica_peso}
-                                activo={detalleActivo?.titulo === "Peso"}
-                                onClick={() =>
-                                    setDetalleActivo({
-                                        titulo: "Peso",
-                                        json: ficha_tecnica_peso
-                                    })
-                                }
+                                descripcion={ficha_tecnica_peso}
+
                             />
                         </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-12" style={{ paddingBottom: "40px" }}>
                             {detalleActivo && (
                                 <div className="row">
@@ -197,12 +214,46 @@ export function Motocicleta() {
                                 </div>
                             )}
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
             <div style={{ background: "#ffffff" }}>
-                <div className="container-fluid contenido--caracteristicas" style={{ paddingBottom: "50px", paddingTop: "50px" }}>
+                <div className="container" style={{ paddingBottom: "100px", paddingTop: "50px" }}>
+                    <div className='row g-4 justify-content-center align-items-center text-center'>
+                        <p style={{ fontSize: '2.2rem', color: '#003e8b', paddingTop: '20px', paddingBottom: '20px', fontFamily: ' Poppins, sans-serif', fontWeight: '700', letterSpacing: '0.05em', opacity: '1' }}>
+                            ESPECIFICACIONES ESPECÍFICAS
+                        </p>
+                    </div>
+
+
+                    <div className='g-4 justify-content-center align-items-center'>
+                        <FichaTecnica
+                            titulo1="Tipo de motor"
+                            valor1={motor}
+                            titulo2="Sistema de alimentación"
+                            valor2={alimentacion}
+                            titulo3="Transmisión"
+                            valor3={transmision}
+                            titulo4="Sistema de frenos delantero"
+                            valor4={frenodelante}
+                            titulo5="Sistema de frenos trasero"
+                            valor5={frenotrasero}
+                            titulo6="Capacidad de tanque"
+                            valor6={tanque}
+                            titulo7="Suspensión delantera"
+                            valor7={suspenciondelantera}
+                            titulo8="Suspensión trasera"
+                            valor8={suspenciontrasera}
+                        />
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div style={{ background: "#f9fafb" }}>
+                <div className="container-fluid contenido--caracteristicas" style={{ paddingBottom: "50px", paddingTop: "70px" }}>
                     <div className='row g-4'>
                         <div className="col-sm-12 col-md-6 col-lg-6" style={{ paddingBottom: "10px" }}>
                             <Interesar opcion="A" />

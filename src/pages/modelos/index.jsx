@@ -22,6 +22,7 @@ export function Modelos() {
         getProductos();
         getMarcasProductos();
     }, []);
+
     useEffect(() => {
         const target = location.state?.scrollTo;
         if (target) {

@@ -57,7 +57,7 @@ export function Promocion() {
             : "/images/fondoPromocion.png"
            // configuracionData?.rutapromocionesportada;
     return (
-        <div style={{ background: "##ffffff" }}>
+        <div style={{ background: "#ffffff" }}>
             <div className="promocion-container"
                 style={{
                     // backgroundImage: `url('${configuracionData?.rutapromocionesportada}')`,
@@ -140,7 +140,7 @@ export function Promocion() {
 
                 </div>
             </div>
-            <div style={{ background: '#002857', paddingBottom: '40px' }}>
+            {/* <div style={{ background: '#002857', paddingBottom: '40px' }}>
                 <div className="terminos-wrapper">
                     <p className="terminos-title">Términos y condiciones</p>
 
@@ -157,7 +157,7 @@ export function Promocion() {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
             <div style={{ background: '#002857', paddingBottom: '40px' }}>
                 <div className="container contenido-promocion-2" >
                     <div className='row g-4' style={{ paddingTop: '60px' }}>
