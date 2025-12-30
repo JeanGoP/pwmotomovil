@@ -1,0 +1,103 @@
+
+.posventaMoto-container {
+  position: relative;
+  height: 75vh; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: contain; 
+
+}
+.posventa-form-container {
+  background: #f9f9fb;
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+.posventa-form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.posventa-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #f3f3f6;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.posventa-input:focus {
+  border-color: #d60000;
+}
+
+
+.posventa-input select {
+  appearance: none;
+}
+
+.posventa-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: #f3f3f6;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: border 0.2s;
+  margin-bottom: 20px;
+}
+
+.posventa-textarea:focus {
+  border-color: #d60000;
+}
+
+
+.posventa-btn {
+  width: 100%;
+  background-color: #d60000;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: 1px solid  #d60000;
+
+}
+
+.posventa-btn:hover {
+  background-color: #b20000;
+}
+
+
+@media (max-width: 600px) {
+  .posventa-form-row {
+    flex-direction: column;
+  }
+  .posventaMoto-container {
+    position: relative;
+    height: 35vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: contain; 
+  
+  }
+}
+

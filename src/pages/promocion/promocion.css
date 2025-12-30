@@ -1,0 +1,79 @@
+.promocion-container {
+  position: relative;
+  height: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: contain; 
+  }
+  
+
+  /* Título */
+  .promocion-overlay {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    color: white;
+  }
+  
+  .promocion-overlay p {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  .contenido-promocion-2{
+    margin-bottom: 50px;
+    border-radius:17px;
+
+  }
+
+  .btn-contacto-promocion{
+    background: white;
+    color: #002857;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 9px;
+    min-width: 27%;
+    min-height: 40px;
+    font-size: 18px;
+
+    transition: all 0.5s ease;
+  }
+
+  .btn-contacto-promocion:hover{
+    background: #d80027;
+    color: white;
+    border: none;
+    transform: scale(1.05);
+
+  }
+
+  .terminos-wrapper {
+    padding: 40px 20px;
+    background: #f6f8fb;
+    text-align: center;
+  }
+  
+  .terminos-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #002857;
+  
+  }
+  
+  .terminos-list {
+    list-style: none; 
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 1rem;
+    color: #4a5565;
+    line-height: 1.9;
+  }
+  .contenidoFiltroPromocion{
+    border-bottom: 3px solid #e5e5e5;
+    border-top:  3px solid #e5e5e5;
+  }

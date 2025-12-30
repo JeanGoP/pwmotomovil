@@ -1,0 +1,260 @@
+.motoObjeto-detalle {
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    color: #222;
+    font-family: "Arial", sans-serif;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .motoObjeto-nombre {
+    font-size: 19px;
+    margin-bottom: 15px;
+    color: #e60012;
+    font-family: Good Timing, Montserrat, sans-serif;
+
+  }
+  
+  .motoObjeto-subtitulo {
+    color: #4a5565;
+    margin-bottom: 15px;
+    /* text-transform: uppercase; */
+    font-family: Poppins, Montserrat, sans-serif;
+
+
+  }
+  
+  .motoObjeto-descripcion {
+    color:#1f325b;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-family: Poppins, Montserrat, sans-serif;
+  }
+  
+  .motoObjeto-precio {
+    background: #f9fafb;
+    color: #1f325b;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+    border-left: 5px solid #1f325b;
+  }
+  
+  .precio--moto{
+    font-size: 30px;
+    margin: 0;
+    font-family: Good Timing, Montserrat, sans-serif;
+  }
+  
+  .precio--titulo {
+    font-size: 15px;
+    margin: 5px 0 0;
+    opacity: 90%;
+    color: #4a5565;
+    font-family: Good Timing, Montserrat, sans-serif;
+  }
+  .colores{
+    font-family: Good Timing, Montserrat, sans-serif;
+    color: #1f325b;
+    font-size: 15px;
+  }
+  .motoObjeto-botones {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-direction: row; /* por defecto horizontal */
+  }
+  
+  @media (max-width: 576px) { /* móviles */
+    .motoObjeto-botones {
+      flex-direction: column; /* en móvil vertical */
+    }
+  
+    .motoObjeto-botones .btn {
+      width: 100%; /* que ocupen todo el ancho */
+    }
+  }
+  
+   .btn-rojo--coti, .btn-rojo--contac {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: Good Timing, Montserrat, sans-serif;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-size: larger;
+
+  } 
+  
+  .btn-rojo--coti{
+    background: #d32f2f;
+    color: white;
+    transition: all 0.5s ease;
+  }
+  
+  .btn-rojo--contac {
+    background: white;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    transition: all 0.5s ease;
+  }
+  .btn-rojo--contac:hover{
+    background:#d32f2f; 
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .btn-rojo--coti:hover{
+    background:#a73b3b; 
+    color: #fff;
+    transform: translateY(-2px);
+  }
+/* 
+
+  .motoObjeto-colores h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .motoObjeto-colores{
+    padding-top: 18px;
+  }
+  
+  .colores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+  }
+  @media (max-width: 500px) {
+    .colores-grid {
+      grid-template-columns: 1fr; 
+    }
+  }
+  .color-btn {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 1px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+  
+  .color-btn:hover {
+    border-color: #aaa;
+  }
+  
+  .color-btn.activo {
+    border-color: #d32f2f;
+    background: #fde7e7;
+  }
+  
+  .color-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .color-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    flex-shrink: 0;
+  }
+  
+  .color-nombre {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  
+  .color-extra {
+    font-size: 12px;
+    color: #d32f2f;
+    font-weight: bold;
+  }
+  
+  .nombre--color{
+    display: flex;
+    justify-content: baseline;
+  }
+ */
+
+ .motoObjeto-colores {
+  padding-top: 18px;
+}
+
+.motoObjeto-colores h5,
+.motoObjeto-colores .colores {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: Good Timing, Montserrat, sans-serif;
+}
+
+
+.colores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+
+.color-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.color-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+.color-btn.activo .color-circle {
+  outline: 3px solid #d32f2f;
+  outline-offset: 3px;
+}
+
+
+.color-circle {
+  width: 40px;             
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+
+.color-nombre {
+  font-size: 10px;
+  color: #333;
+  display: block;
+  text-align: center;
+  font-family: Good Timing, Montserrat, sans-serif;
+}
+
+
+.color-extra {
+  font-size: 12px;
+  color: #d32f2f;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+
+@media (max-width: 500px) {
+  .colores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 

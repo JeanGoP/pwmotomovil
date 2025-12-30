@@ -1,0 +1,119 @@
+.contenedor__imagen__conocenos {
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    padding: 20px; 
+    background: white;
+    padding-bottom: 50px;
+}
+
+.titulo-conocenos {
+    font-size: clamp(2.5rem, 5vw, 3.1rem);
+
+    line-height: 1.2;
+    max-width: 1078px;
+
+    color: #0a1f44;
+  }
+  .subtitulo-conocenos{
+    padding-top: 13px;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #575a5f;
+
+  }
+  .titulo-conocenos .conocenos {
+    color: #d80027; 
+  }
+
+  .conocenos-linea {
+    width: 100px;
+    height: 5px;
+    background-color: #d80027; 
+    border-radius: 2px;
+    margin-bottom: 12px;
+    margin-top: 14px;
+  }
+  .titulo--card--conocenos{
+    font-size: clamp(2.2rem, 3vw, 2.8rem);
+    margin-top: 50px;
+    color: #fff;
+  }
+  .card-conocenos {
+    max-width: 900px;       
+    margin: 2rem auto;       
+    text-align: center;     
+    line-height: 1.6;      
+    color: white;     
+    font-size: 1.25rem;    
+   
+  }
+  .conocenos-mision-linea {
+    width: 100px;
+    height: 4px;
+    background-color: #d80027; 
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .subtitulo--conocenos{
+    font-size: 1.2rem;   
+    color: #a5abb1;   
+    padding-top: 13px;
+  }
+  /*historia*/
+  .historia {
+    padding: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff; 
+    text-align: center;
+  }
+  
+  .historia p {
+    margin-bottom: 30px;
+  }
+  
+  .historia strong {
+    font-weight: 700;
+    color: #111827; 
+  }
+  
+
+  .historia-destacado{
+    background-color:#fcf1f4; 
+    border-left: 4px solid #d80027; 
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  .historia-texto-destacado {
+    font-weight: 700;
+    color: #d80027;
+    font-size: 19px;
+    margin-top: 10px;
+  
+  }
+  
+  .conocenos-btn {
+    background: #002857;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    transition: background 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .conocenos-btn:hover {
+    background: #fff;
+    color: #002857;
+    border: 2px solid #fff;
+  }
+  

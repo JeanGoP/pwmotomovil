@@ -1,0 +1,44 @@
+.marc-card {
+
+    border-radius: 12px;
+    padding: 32px 20px;
+
+    text-align: center;
+    border: none;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+
+
+  /* Icono circular */
+  .marc-icono {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  /* Título */
+  .marc-titulo {
+
+ 
+    margin-bottom: 20px;
+    font-family: Poppins, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  /* Descripción */
+  .marc-descripcion {
+    font-family: Poppins, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }

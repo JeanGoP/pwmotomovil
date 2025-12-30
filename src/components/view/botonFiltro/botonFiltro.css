@@ -1,0 +1,42 @@
+.custom-btn {
+  background: #f3f4f6;
+  color: #364153;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transform: scale(1); /* tamaño normal */
+  font-family: Poppins, sans-serif;
+}
+
+/* Hover para botones inactivos */
+.custom-btn:hover {
+  background: #f3f4f6;
+  color: #364153;
+  transform: scale(1.1);
+}
+
+/* Botón activo */
+.custom-btn.active {
+  background: linear-gradient(
+    to right,
+    #b8003e,
+    #8a0030
+  ); 
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1); /* crece un poco */
+}
+
+/* Hover para botón activo */
+.custom-btn.active:hover {
+  background: linear-gradient(
+    to right,
+    #b8003e,
+    #8a0030
+  ); 
+}

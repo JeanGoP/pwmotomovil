@@ -1,0 +1,33 @@
+.card-tratamiento {
+    border-radius: 12px;
+    /* border: 1px solid #e5e5e5; */
+    max-width: 80%;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+   
+    
+  }
+  
+  .card-tratamiento .card-title {
+    font-size: 1.4rem;
+    color: #003e8b;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+  }
+  
+  .card-tratamiento .card-text p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-family: Poppins, sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    .card-tratamiento {
+      max-width: 100%;
+    }
+}
+@media (max-width: 1000px) {
+  .card-tratamiento {
+    max-width: 100%;
+  }
+}

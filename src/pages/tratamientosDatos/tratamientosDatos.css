@@ -1,0 +1,294 @@
+.tratamiento-container {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(
+      to bottom right,
+      #003e8b,
+      #003e8b,
+      #b8003e
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Poppins, sans-serif;
+  }
+  .tituloTrataminentoDatos{
+    position: relative;
+
+    width: 100%;
+    background: #f4f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  
+  /* Título */
+  .tratamiento-overlay {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 100px;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    font-weight: 700;
+
+  }
+
+  
+.capitulo{
+
+    color: #ffffff;
+    font-size: clamp(1.3rem, 2vw, 2rem);
+}
+
+
+@media (max-width: 768px) {
+    .tratamiento-overlay {
+        padding-top: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+      }
+}
+@media (max-width: 1000px) {
+    .tratamiento-overlay {
+        padding-top: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+      }
+}
+
+.botones-capitulos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .boton-capitulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #d80027;
+    background: white;
+    color: #d80027;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .boton-capitulo:hover {
+    background: #f8d7da;
+  }
+  
+  .boton-capitulo.activo {
+    background: #d80027;
+    color: white;
+  }
+  
+  .contenido--card--tratamiento{
+    display: flex;
+    justify-content: center;   
+    margin-bottom: 25px;
+  }
+
+  .info-card--tratamiento {
+    max-width: 900px;
+    margin: auto;
+    background: linear-gradient(180deg, #f9fafc, #fdf7f9);
+    border-radius: 16px;
+    padding: 32px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    font-family: Poppins, sans-serif;
+  }
+
+  .info-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .info-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+
+  .info-role {
+    font-size: 15px;
+    color: #6b7280;
+  }
+
+  .info-email {
+    font-size: 15px;
+    font-weight: 700;
+    color: #d1003f;
+    word-break: break-word;
+  }
+
+  @media (max-width: 640px) {
+    .info-card--tratamiento {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  .contacto-section {
+    padding: 6rem 1.5rem;
+    background: linear-gradient(
+      to right,
+      #003e8b,
+      #5b4a7a,
+      #b8003e
+    );
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contacto-card {
+    width: 100%;
+    max-width: 1100px;
+    padding: 3rem 3.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  
+  .contacto-titulo {
+    text-align: center;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contacto-icono {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+  
+  .contacto-label {
+    display: block;
+    font-size: 14px;
+    color: #e5e7eb;
+    margin-bottom: 4px;
+  }
+  
+  .contacto-nombre,
+  .contacto-email {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .contacto-cargo {
+    font-size: 15px;
+    color: #e5e7eb;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .contacto-grid {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  
+    .contacto-card {
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+  
+    .contacto-item {
+      width: 100%;
+      padding: 10px;
+
+      
+    }
+
+    .contacto-nombre,
+    .contacto-email {
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+  
+
+  .btn__volverInicio{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    border-radius: 30px;
+    padding: 15px;
+    width: 250px;
+    color: white;
+    background: linear-gradient(
+      to right,
+      #b8003e,
+      #5b4a7a,
+      #003e8b
+    );
+    border: none;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+  
+  }
+  
+  .btn__volverInicio:hover{
+    background: linear-gradient(
+      to right,
+      #b8003e,
+      #5b4a7a,
+      #003e8b
+    );
+  border: none;
+  transform: scale(1.08);
+  
+  }
