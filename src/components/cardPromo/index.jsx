@@ -3,9 +3,10 @@ import './cardPromo.css'
 import { useState } from "react";
 import { useEffect } from "react";
 import { LuMessageCircle } from "react-icons/lu";
+import { ArrowRight } from "lucide-react";
 
 
-const CardPromo = ({ imagen, titulo, cuerpo, categoria='' }) => {
+const CardPromo = ({ imagen, titulo, cuerpo, categoria='' , precio =''}) => {
     const [showModal, setShowModal] = useState(false);
     useEffect(() => {
       if (showModal) {
@@ -29,14 +30,16 @@ const CardPromo = ({ imagen, titulo, cuerpo, categoria='' }) => {
           <div className="promo-card">
             <div className="promo-card-image" onClick={() => setShowModal(true)}>
               <img src={imagen} alt={titulo} />
+              <span className="categoriaPromocion" >{categoria}</span>
             </div>
             <div className="promo-card-body">
-            <span className="categoriaPromocion" >{categoria}</span>
+      
               <span className="promo-card-subtitle">{titulo}</span>
               <h3 className="promo-card-title">{cuerpo}</h3>
+              <span className="promo-card-subtitle22">{precio}</span>
               <button className="promo-card-button"  onClick={handleClickWhatsapp}>
              
-                <span>Solicitar Cotización</span>
+                <span> Ver Detalles <ArrowRight size={20} style={{position:'relative', left:'10px'}}/></span>
               </button>
             </div>
           </div>

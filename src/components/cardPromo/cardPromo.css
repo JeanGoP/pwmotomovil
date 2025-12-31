@@ -10,7 +10,8 @@
     cursor: pointer;
     height: 100%;              
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;    
+    font-family: Poppins, sans-serif; 
   }
   
 
@@ -20,9 +21,10 @@
   }
 
   .promo-card-image {
-    background:#002857; 
+    position: relative;
+    background: #002857;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     overflow: hidden;
   }
   
@@ -32,6 +34,8 @@
     object-fit: cover;
     transition: transform 0.4s ease;
     display: block;
+    position: relative;
+    z-index: 1;
   }
   
   .promo-card:hover .promo-card-image img {
@@ -52,38 +56,66 @@
   
   .promo-card-subtitle {
     display: block;
-    font-size: 1rem;
-    color: #002857;
+    font-family: Poppins, sans-serif;
+    font-size: clamp(1.4rem, 2.6vw, 1.5rem);
+    font-weight: 700;    
+    color:#003e8b;
     text-transform: uppercase;
-    font-family: Good Timing, Montserrat, sans-serif;
+
+  }
+  .promo-card-subtitle22 {
+  
+    font-family: Poppins, sans-serif;
+    font-size: clamp(1.4rem, 2.6vw, 1.7rem);
+    font-weight: 700;    
+    color:#b8003e;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+
   }
   
   .promo-card-title {
     font-size: 0.9rem;
     margin-top: 13px;
     margin-bottom: 25px;
-    color: #4a5565;
-    font-family: Good Timing, Montserrat, sans-serif;
+    color: #99a1af;
+    font-family: Poppins, sans-serif;
+    text-decoration: line-through;
   }
   
 
   .promo-card-button {
     width: 100%;
     padding: 12px;
-    background: #e60000;
+    background: linear-gradient(
+      to right,
+      #b8003e,
+      #8a0030
+    );                                
+  
     color: #fff;
     font-size: 1rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 9999px; 
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
-    transition: background 0.5s ease;
+    transition: all 0.5s ease;
+
+    font-weight: 600;
+
   }
   
   .promo-card-button:hover {
-    background:#002857;
+    background: linear-gradient(
+      to right,
+      #b8003e,
+      #8a0030
+    );         
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25); 
+    transform: scale(1.05);                          
+  
   }
   
   
@@ -153,14 +185,19 @@
   }
   
   .categoriaPromocion {
-    display: inline-block;     
-    background: #002857;
-    color: #fff;
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 10px;
-    line-height: 1;          
-    white-space: nowrap;  
-    margin-bottom: 15px;
-
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   background: linear-gradient(
+    to right,
+    #b8003e,
+    #8a0030
+  ); 
+   color: #fff;
+   font-size: 0.75rem;
+   padding: 4px 8px;
+   border-radius: 15px;
+   font-weight: 600;
+   font-family: Poppins, sans-serif;
+   z-index: 2;
   }

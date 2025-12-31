@@ -10,8 +10,10 @@ import { LanguageContext } from "../../context/context";
 import CardPromo from '../../components/cardPromo';
 import CustomSelect from '../../components/customSelect';
 import { Funnel } from 'lucide-react';
-
+import useScrollReveal from "../../components/useScrollReveal/useScrollReveal";
+import { Gift } from 'lucide-react';
 export function Promocion() {
+    useScrollReveal();
     const { configuracionData = [], getCofiguracion } = useContext(LanguageContext);
     const [activeBtn, setActiveBtn] = useState("TODOS");
 
@@ -43,19 +45,19 @@ export function Promocion() {
         )
     ];
     const promocionesFiltradas =
-    activeBtn === "TODOS"
-      ? ImgPromociones
-      : ImgPromociones.filter(
-          promo =>
-            promo.categoria?.trim().toLowerCase() ===
-            activeBtn.trim().toLowerCase()
-        );
+        activeBtn === "TODOS"
+            ? ImgPromociones
+            : ImgPromociones.filter(
+                promo =>
+                    promo.categoria?.trim().toLowerCase() ===
+                    activeBtn.trim().toLowerCase()
+            );
     const countPromocion = promocionesFiltradas.length;
     const rutaImagenFondo =
         window.innerWidth <= 576
             ? "/images/fondoPromocion.png"
             : "/images/fondoPromocion.png"
-           // configuracionData?.rutapromocionesportada;
+    // configuracionData?.rutapromocionesportada;
     return (
         <div style={{ background: "#ffffff" }}>
             <div className="promocion-container"
@@ -73,41 +75,23 @@ export function Promocion() {
                 </button>
 
             </div>
-            <div className=''>
-                <div className="container" style={{ paddingBottom: "80px", paddingTop: "80px" }}>
-                    <div className='row g-4 '>
-                        <SectionHeader
-                            titulo={configuracionData?.tituloPromocion}
-                            cuerpo={configuracionData?.descripcionPromocion}
-                            titleSize="clamp(1.7rem, 4vw, 2rem)"
-                            subtitleSize="clamp(1.3rem, 2vw, 1.4rem)"
-                        />
-                    </div>
-                </div>
-                <div className='contenidoFiltroPromocion' style={{ background: '#f9fafb', paddingTop: '30px', paddingBottom:'30px' }}>
-                    <div className="container">
-                        <div className="row" id="contenidoFiltrosProductos">
-                            <div className="col-sm-12 col-md-12 col-lg-7 col-xl-7 d-flex flex-column flex-md-row align-items-md-center gap-3">
-                                <span style={{ fontSize: '18px', whiteSpace: 'nowrap' }}>
-                                    <Funnel size={20} /> Filtrar por Categoría:
-                                </span>
 
-                                <CustomSelect
-                                    productosLimpios={categoriasPromocion}
-                                    opcion="A"
-                                    value={activeBtn}
-                                    onChange={(valor) => setActiveBtn(valor)}
-                                />
-                               <span style={{ fontSize: '18px', whiteSpace: 'nowrap' }}>
-                                   {countPromocion}  bonos
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+            <div style={{ borderBottom: '4px solid #b8003e' }}>
+                <div className='container reveal'>
+                    <div className="contenedor__imagen__conocenos d-flex flex-column justify-content-center align-items-center text-center">
+                        <h1 className="" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: '700', letterSpacing: '0.05em', color: '#003e8b', paddingBottom: '10px' }}>
+                            <Gift size={60} style={{ color: '#b8003e', position: 'relative', bottom: '8px' }} /> PROMOCIONES
 
+                        </h1>
+                    </div>
                 </div>
             </div>
-            <div className="container" style={{ paddingBottom: "60px", paddingTop: "80px" }}>
+            <div className=" justify-content-center align-items-center text-center" style={{background:'#f9fafb'}}>
+                <h1 className="" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: '700', letterSpacing: '0.05em', color: '#003e8b', paddingTop:'70px' }}>
+                    TODAS LAS PROMOCIONES
+
+                </h1>
+                <div className="container" style={{ paddingBottom: "60px", paddingTop: "50px" }}>
                 <div className="row">
                     {promocionesFiltradas.length === 0 ? (
                         Array(4).fill(0).map((_, index) =>
@@ -121,7 +105,7 @@ export function Promocion() {
                         promocionesFiltradas.map((item, index) => (
                             <div
                                 key={index}
-                                className="col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex"
+                                className="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex"
                                 style={{ marginBottom: "34px" }}
                             >
                                 <CardPromo
@@ -129,8 +113,9 @@ export function Promocion() {
                                     titulo={item.titulo}
                                     categoria={item.categoria}
                                     cuerpo={item.descripcion}
-                                    imagen={item.imagen}
-
+                                   // imagen={item.imagen}
+                                   imagen='/images/Promocion_1.png'
+                                    precio ={item.precio}
                                     whatsapp={configuracionData?.whatsapp || ''}
                                 />
 
@@ -140,6 +125,10 @@ export function Promocion() {
 
                 </div>
             </div>
+
+            </div>
+
+
             {/* <div style={{ background: '#002857', paddingBottom: '40px' }}>
                 <div className="terminos-wrapper">
                     <p className="terminos-title">Términos y condiciones</p>
@@ -158,7 +147,7 @@ export function Promocion() {
                     </ul>
                 </div>
             </div> */}
-            <div style={{ background: '#002857', paddingBottom: '40px' }}>
+            {/* <div style={{ background: '#002857', paddingBottom: '40px' }}>
                 <div className="container contenido-promocion-2" >
                     <div className='row g-4' style={{ paddingTop: '60px' }}>
                         <SectionHeader
@@ -171,7 +160,7 @@ export function Promocion() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             <div className="container">
