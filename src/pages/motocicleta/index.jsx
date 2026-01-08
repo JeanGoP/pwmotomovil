@@ -21,7 +21,7 @@ export function Motocicleta() {
     if (!moto) {
         return <p>No se encontró información de la motocicleta.</p>;
     }
-    console.log(moto)
+   
     const [coloresMoto, setColoresMoto] = useState(() => {
         if (moto?.color && moto.color.length > 0) {
             return moto.color.map((c, index) => ({

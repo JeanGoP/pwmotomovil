@@ -1,0 +1,157 @@
+.detallepromocion-container {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 150px;
+
+}
+
+.detallepromocion-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.detallepromocion-overlay {
+    position: relative;
+    z-index: 2;
+
+}
+
+.detallepromociontitulo {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 8px;
+}
+
+.detallepromocionback-button {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 20;
+    background: none;
+    border: none;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    
+}
+
+
+.detallepromocionback-button:hover {
+    transform: scale(1.15);
+    color: #ffffff;
+}
+
+.detallepromocionbono{
+    background: linear-gradient(
+        135deg,
+        rgba(46, 125, 50, 0.75) 0%,
+        rgba(46, 125, 50, 0.6) 100%
+      );
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    
+}
+.detallepromocionAnterior{
+    font-family: Poppins, sans-serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    color: #fff9;
+    text-decoration: line-through;
+    margin-bottom: 8px;
+    font-weight: 200;
+}
+.detallepromocionIva{
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fffc;
+}
+
+.ofertaTitulo{
+    font-family: Poppins, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.card-oferta {
+    border-radius: 12px;
+    background: #0049a5;
+    max-width: 80%;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .card-oferta {
+      max-width: 100%;
+    }
+}
+@media (max-width: 1000px) {
+  .card-oferta {
+    max-width: 100%;
+  }
+}
+
+.ofertaparrafo{
+    font-family: Poppins, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    padding-top: 30px;
+}
+.ofertaseparador{
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.ofertatexto{
+    font-size: 0.875rem; 
+    color: rgba(255, 255, 255, 0.7); 
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    line-height: 1.6;
+}
+
+.detallepromocionDetalle{
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-family: Poppins, sans-serif;
+    color: #fffc;
+    padding-right: 40%;
+}
+
+@media (max-width: 768px) {
+    .detallepromocionDetalle {
+        padding-right: 10px;
+    }
+}

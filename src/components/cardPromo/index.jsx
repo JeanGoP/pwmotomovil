@@ -4,9 +4,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { LuMessageCircle } from "react-icons/lu";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Calendar } from "lucide-react";
 
 
-const CardPromo = ({ imagen, titulo, cuerpo, categoria='' , precio =''}) => {
+const CardPromo = ({ imagen, titulo, cuerpo, categoria='' , precio ='', promocion}) => {
     const [showModal, setShowModal] = useState(false);
     useEffect(() => {
       if (showModal) {
@@ -24,20 +26,27 @@ const CardPromo = ({ imagen, titulo, cuerpo, categoria='' , precio =''}) => {
      
          window.open(url, "_blank");
        };
+       const navigate = useNavigate();
+       const handlePromocionDetalle = (data) => {
+        navigate("/detallepromocion", {
+          state: { promocion: data }
+        });
+      };
     return (
         <>
   
           <div className="promo-card">
             <div className="promo-card-image" onClick={() => setShowModal(true)}>
-              <img src={imagen} alt={titulo} />
+              <img src={imagen} alt={promocion.descripcion} />
               <span className="categoriaPromocion" >{categoria}</span>
             </div>
             <div className="promo-card-body">
       
-              <span className="promo-card-subtitle">{titulo}</span>
-              <h3 className="promo-card-title">{cuerpo}</h3>
+              <span className="promo-card-subtitle">{promocion.descripcion}</span>
+              <h3 className="promo-card-title">{promocion.precioAnterior}</h3>
               <span className="promo-card-subtitle22">{precio}</span>
-              <button className="promo-card-button"  onClick={handleClickWhatsapp}>
+              <span className="promo-fecha"><Calendar size={18} style={{position:'relative', bottom:'2px', right:'5px'}}/>{promocion.fecha}</span>
+              <button className="promo-card-button"  onClick={() => handlePromocionDetalle(promocion)}>
              
                 <span> Ver Detalles <ArrowRight size={20} style={{position:'relative', left:'10px'}}/></span>
               </button>

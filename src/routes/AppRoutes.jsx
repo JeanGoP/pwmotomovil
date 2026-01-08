@@ -16,6 +16,7 @@ import ProtectedRoute from '../context/protectedRoute';
 import {TratamientosDatos}from '../pages/tratamientosDatos'
 import { Posventa } from '../pages/posventa';
 import { Modelos } from '../pages/modelos';
+import { DetallePromocion } from '../pages/detallePromocion';
 
 function AppRoutesWrapper() {
   const location = useLocation();
@@ -30,8 +31,8 @@ function AppRoutesWrapper() {
         <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login/administrador" element={<ProtectedRoute><Administrador /></ProtectedRoute> } />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login/administrador" element={<ProtectedRoute><Administrador /></ProtectedRoute> } />
+        <Route path="/login" element={<Login />} /> */}
         <Route path="/promocion" element={<Promocion />} />
         <Route path="/cotizacion" element={<Cotizacion />} />
         <Route path="/conocenos" element={<Conocenos />} />
@@ -39,6 +40,7 @@ function AppRoutesWrapper() {
         <Route path="/tratamientosDatos" element={<TratamientosDatos />} />
         <Route path="/modelos" element={<Modelos />} />
         <Route path="/posventa" element={<Posventa />} />
+        <Route path="/detallepromocion" element={<DetallePromocion />} />
         <Route path="*" element={<RedirectToHome />} />
 
         <Route

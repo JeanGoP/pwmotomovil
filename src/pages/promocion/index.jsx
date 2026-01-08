@@ -12,6 +12,7 @@ import CustomSelect from '../../components/customSelect';
 import { Funnel } from 'lucide-react';
 import useScrollReveal from "../../components/useScrollReveal/useScrollReveal";
 import { Gift } from 'lucide-react';
+import PromoCarousel from '../../components/promoCarousel';
 export function Promocion() {
     useScrollReveal();
     const { configuracionData = [], getCofiguracion } = useContext(LanguageContext);
@@ -58,6 +59,32 @@ export function Promocion() {
             ? "/images/fondoPromocion.png"
             : "/images/fondoPromocion.png"
     // configuracionData?.rutapromocionesportada;
+
+    // const promocionesJson = [
+    //     {
+    //       id: 1,
+    //       titulo: "DR 150 FI ABS",
+    //       precio: "$11.999.000",
+    //       precioAnterior: "$12.999.000",
+    //       ahorro: "Ahorra $1.000.000",
+    //       imagen: "/images/Promocion_1.png",
+    //       bono: "BONO $1M + SOAT GRATIS",
+    //       etiqueta: "% OFERTA ESPECIAL",
+    //       fecha:'Válido del 1 al 30 de noviembre de 2025'
+    //     },
+    //     {
+    //       id: 2,
+    //       titulo: "GN 125",
+    //       precio: "$7.999.000",
+    //       precioAnterior: "$8.499.000",
+    //       ahorro: "Ahorra $500.000",
+    //       imagen: "/images/Promocion_1.png",
+    //       bono: "BONO ESPECIAL",
+    //       etiqueta: "% OFERTA",
+    //       fecha:'Válido del 1 al 30 de noviembre de 2025'
+    //     }
+    //   ];
+      
     return (
         <div style={{ background: "#ffffff" }}>
             <div className="promocion-container"
@@ -83,6 +110,21 @@ export function Promocion() {
                             <Gift size={60} style={{ color: '#b8003e', position: 'relative', bottom: '8px' }} /> PROMOCIONES
 
                         </h1>
+                    </div>
+                </div>
+            </div>
+            <div >
+                <div className='container reveal'>
+                    <div className="contenedor__imagen__conocenos d-flex flex-column justify-content-center align-items-center text-center">
+                    <h1 className="" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: '700', letterSpacing: '0.05em', color: '#003e8b', paddingTop:'10px' }}>
+                    OFERTAS ESPECIALES
+
+                </h1>
+
+            
+                    </div>
+                    <div>
+                    <PromoCarousel promociones={ImgPromociones} />
                     </div>
                 </div>
             </div>
@@ -117,6 +159,7 @@ export function Promocion() {
                                    imagen='/images/Promocion_1.png'
                                     precio ={item.precio}
                                     whatsapp={configuracionData?.whatsapp || ''}
+                                    promocion={item}
                                 />
 
                             </div>

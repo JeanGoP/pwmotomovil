@@ -29,10 +29,11 @@ export function Posventa() {
       getCofiguracion(NIT, 'Token', 'nit', 'USERFINALLY');
     }
   }, []);
-  const rutaImagenFondo =
-    window.innerWidth <= 576
-      ? "/images/posventaFondo.png"
-      : "/images/posventaFondo.png";
+
+  const rutaImagenFondo = configuracionData?.rutaPortada
+    // window.innerWidth <= 576
+    //   ? "/images/posventaFondo.png"
+    //   : "/images/posventaFondo.png";
 
   const jsonPosventa = [
     {
