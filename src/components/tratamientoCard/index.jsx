@@ -1,7 +1,8 @@
 import React from "react";
 import './TratamientoCard.css'
 import { CircleCheckBig } from "lucide-react";
-const TratamientoCard = ({ titulo = '', bodyHtml = '', opcion = 'A',items = [] }) => {
+import { Calendar } from "lucide-react";
+const TratamientoCard = ({ titulo = '', bodyHtml = '', opcion = 'A',items = [], fecha='' }) => {
 
 
   if (opcion == 'A') {
@@ -33,6 +34,7 @@ const TratamientoCard = ({ titulo = '', bodyHtml = '', opcion = 'A',items = [] }
             </ul>
 
           </div>
+          
         </div>
       </div>
     );
@@ -53,7 +55,11 @@ const TratamientoCard = ({ titulo = '', bodyHtml = '', opcion = 'A',items = [] }
             </ul>
 
           </div>
+
         </div>
+        <div className="tratamiento-contenido-fecha">
+          <span className="tratamiento-fecha"><Calendar size={18} style={{position:'relative', bottom:'2px', right:'5px', color:'#b8003e'}}/>{fecha}</span>
+          </div>
       </div>
     );
   }

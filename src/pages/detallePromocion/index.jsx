@@ -32,8 +32,9 @@ export function DetallePromocion() {
     ?.split(";")
     .map(item => item.trim())
     .filter(item => item.length > 0);
-    
+
     const imagenPromocion = promocion.imagen || "/images/nophoto.jpg"
+    const fecha =   promocion.fecha || '';
     return (
         <>
             <div style={{ background: "#ffffff" }}>
@@ -61,10 +62,10 @@ export function DetallePromocion() {
                 <div style={{ background: "#f9fafb" }}>
                     <div className="container" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
                         <div className="row">
-                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6" style={{ paddingBottom: '50px' }}>
+                            <div className="col-sm-12 col-md-12 col-lg-6" style={{ paddingBottom: '50px' }}>
                                 <TratamientoCard titulo='CARACTERÍSTICAS DESTACADAS' bodyHtml='' opcion='B' items={items} />
                             </div>
-                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6" style={{ paddingBottom: '50px' }}>
+                            <div className="col-sm-12 col-md-12 col-lg-6" style={{ paddingBottom: '50px' }}>
                                 <div className="card card-oferta">
                                     <div className="card-body">
                                         <h5 className="ofertaTitulo">¡APROVECHA ESTA OFERTA!</h5>
@@ -79,8 +80,8 @@ export function DetallePromocion() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <TratamientoCard titulo='CONDICIONES' bodyHtml='' opcion='C' items={itemsCondiciones} />
+                            <div className="col-sm-12 col-md-12 col-lg-6">
+                            <TratamientoCard titulo='CONDICIONES' bodyHtml='' opcion='C' items={itemsCondiciones} fecha={fecha}/>
                             </div>
                         </div>
                     </div>
