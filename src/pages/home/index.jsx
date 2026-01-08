@@ -327,8 +327,8 @@ export function Home() {
         <div style={{ background: '#f9fafb' }}>
             {/* Menu de inicio */}
             <div id="inicio" className='contenedor-carousel'>
-                {/* <CarouselHero img={configuracionData?.rutaImgCarrousel || ''} /> */}
-                <CarouselHero img={imageTemp} />
+                 <CarouselHero img={configuracionData?.rutaImgCarrousel || ''} /> 
+                {/* <CarouselHero img={imageTemp} /> */}
             </div>
 
             <div id="modelos" className='home--contenido--2' >
