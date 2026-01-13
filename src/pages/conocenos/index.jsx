@@ -126,7 +126,7 @@ export function Conocenos() {
                         <p></p>
                     </div>
                 </div>
-                <div style={{ borderBottom: '4px solid #b8003e' }}>
+                <div>
                     <div className='container reveal'>
                         <div className="contenedor__imagen__conocenos d-flex flex-column justify-content-center align-items-center text-center">
                             <h1 className="" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: '700', letterSpacing: '0.05em', color: '#003e8b', paddingBottom: '10px' }}>
@@ -139,7 +139,7 @@ export function Conocenos() {
                         </div>
                     </div>
                 </div>
-
+                <div style={{ borderBottom: '4px solid #b8003e' }}></div>
             </div>
             <div style={{ background: "#f9fafb" }}>
                 <div className="d-flex flex-column justify-content-center align-items-center text-center">

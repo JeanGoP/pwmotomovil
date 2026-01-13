@@ -104,7 +104,7 @@ export function Posventa() {
         </button>
 
       </div>
-      <div style={{ borderBottom: '4px solid #b8003e' }}>
+      <div>
         <div className='container'>
           <div className="contenedor__imagen__conocenos d-flex flex-column justify-content-center align-items-center text-center">
             <h1 className="" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.7em', fontWeight: '700', letterSpacing: '0.05em', color: '#003e8b', paddingBottom: '10px' }}>
@@ -116,9 +116,10 @@ export function Posventa() {
 
           </div>
         </div>
+        <div style={{ borderBottom: '4px solid #b8003e' }}></div>
       </div>
-      <div style={{ background: '#f9fafb', paddingTop: '20px' }} className='reveal' >
-        <div className="container" id='repuestosPosventa' style={{ paddingTop: '50px' }}>
+      <div style={{ background: '#f9fafb', paddingTop: '20px' }} >
+        <div className="container reveal" id='repuestosPosventa' style={{ paddingTop: '50px' }}>
           <div className=" d-flex flex-column justify-content-center align-items-center text-center">
             <h1 className="" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2em,0.5em,3em)', fontWeight: '700', letterSpacing: '0.05em', color: '#003e8b', paddingBottom: '10px' }}>
               NUESTROS SERVICIOS
@@ -130,7 +131,7 @@ export function Posventa() {
           </div>
 
         </div>
-        <div className='container-fluid'>
+        <div className='container-fluid reveal'>
           <div className='row g-4 align-items-stretch' style={{ paddingTop: '50px', paddingBottom: '80px' }}>
             {jsonPosventa.map((item, index) => (
               <div className="col-sm-12 col-md-6 col-lg-3" key={index}>
