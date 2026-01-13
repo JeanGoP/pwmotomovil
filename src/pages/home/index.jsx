@@ -374,7 +374,7 @@ export function Home() {
                                                     .filter((año) => precios[año]);
 
                                                 if (añosDisponibles.length === 0) {
-                                                    return "Precio No Disponible";
+                                                    return "No Disponible";
                                                 }
 
                                                 const añoMasReciente = Math.max(...añosDisponibles);
