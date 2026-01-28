@@ -30,7 +30,7 @@ export function Posventa() {
     }
   }, []);
 
-  const rutaImagenFondo = configuracionData?.rutaPortada
+  const rutaImagenFondo = configuracionData?.rutaPortadaPosventa
     // window.innerWidth <= 576
     //   ? "/images/posventaFondo.png"
     //   : "/images/posventaFondo.png";
