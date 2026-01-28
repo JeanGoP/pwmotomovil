@@ -108,6 +108,12 @@ function Footer() {
               >
                 Conócenos
               </NavLink></li>
+              <li><a style={{ fontSize: "16px", color: "rgb(177, 175, 175)",textDecoration:'none' }} className="a-footer"
+               href="https://lineaetica.onrender.com/?empresa=Motomovil" target="_blank"  
+              >
+                Línea Ética
+              </a>
+              </li>
             </ul>
           </div>
 
