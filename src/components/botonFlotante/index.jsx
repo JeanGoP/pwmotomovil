@@ -7,7 +7,7 @@ const BotonFlotante = () => {
     const [hover, setHover] = useState(false);
     const handleClick = () => {
     
-      const telefono = "573152959977"; 
+      const telefono = ""; 
       const mensaje = "Hola, quiero más información"; 
       const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   
