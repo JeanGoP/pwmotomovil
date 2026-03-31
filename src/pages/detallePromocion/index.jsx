@@ -21,7 +21,7 @@ export function DetallePromocion() {
         navigate("/promocion", { state: { scrollTo: id } });
     };
 
-//console.log(promocion.caracteristicas)
+
     const items =  promocion.caracteristicas
     ?.split(";")
     .map(item => item.trim())
@@ -35,12 +35,13 @@ export function DetallePromocion() {
 
     const imagenPromocion = promocion.imagen || "/images/nophoto.jpg"
     const fecha =   promocion.fecha || '';
+  
     return (
         <>
             <div style={{ background: "#ffffff" }}>
                 <div className="detallepromocion-container"
                     style={{
-                        backgroundImage: `url(${imagenPromocion})`,
+                        backgroundImage: `url("${imagenPromocion}")`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center center",
                         backgroundSize: "cover",

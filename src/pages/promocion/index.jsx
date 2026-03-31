@@ -156,8 +156,8 @@ export function Promocion() {
                                     titulo={item.titulo}
                                     categoria={item.categoria}
                                     cuerpo={item.descripcion}
-                                   // imagen={item.imagen}
-                                   imagen='/images/Promocion_1.png'
+                                    imagen={item.imagen}
+                                  // imagen='/images/Promocion_1.png'
                                     precio ={item.precio}
                                     whatsapp={configuracionData?.whatsapp || ''}
                                     promocion={item}
