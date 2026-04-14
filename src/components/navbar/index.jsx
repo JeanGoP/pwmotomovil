@@ -158,7 +158,7 @@ const Navbar = () => {
                 COTIZACIÓN
               </NavLink>
             </li>
-            <li className="nav-item">
+        {/*    <li className="nav-item">
               <NavLink 
                 to="/conocenos" 
                 className={({ isActive }) => 
@@ -168,7 +168,7 @@ const Navbar = () => {
               >
                 CONÓCENOS
               </NavLink>
-            </li>
+            </li>*/}
             {/* WhatsApp */}
             {/* <li className="nav-item mx-2 my-lg-0 my-2 li--btnwhatsapp">
               <a  
