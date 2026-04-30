@@ -194,7 +194,7 @@ function Footer() {
             className="mb-2"
             style={{ textAlign: "center", fontSize: "16px", color: "#fffc" }}
           >
-            © 2025 MOTOMOVIL. Todos los derechos reservados.
+            © 2025 MOTOMOVIL. Todos los derechos reservados. | Develop By @Sidecil SAS
           </p>
 
           <NavLink className="a--footer--g" to="/tratamientosDatos">
